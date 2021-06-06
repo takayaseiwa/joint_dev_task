@@ -65,11 +65,9 @@ $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null,
 
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
 
-$sports2 = array_unique($sports);
+$sports = array_diff($sports,[null]);
 
-foreach($sports2 as $value) {
-    echo $value;
-}
+print_r($sports);
 
 ?>
 
@@ -112,7 +110,8 @@ $numbers1 = [1,2,3,4,5];
 
 $numbers2 = [];
 foreach ($numbers1 as $number) {
-        $numbers2= $number * 10;
+        $number= $number * 10;
+        array_push($numbers2,$number);
         }    
     print_r($numbers2);
 
@@ -161,8 +160,18 @@ print("#####q9#####".PHP_EOL);
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
   # 以下に回答を記載
-
+<?php
+$names = ["田中", "佐藤", "佐々木", "高橋"];
+$member = [];
+foreach ($names as $key => $name) {
+  $number = $key + 1;
+  $names2 = "会員No.".$number."".$name;
+  array_push($member,$names2);
+}
+print_r($member);
 echo PHP_EOL;
+
+?>
 
 print("#####q10#####".PHP_EOL);
 $foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼","高級なうに"]];
