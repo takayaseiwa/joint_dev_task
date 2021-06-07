@@ -4,12 +4,12 @@
 print("#####q1#####".PHP_EOL);
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
-  # 以下に回答を記載
+# 以下に回答を記載
 <?php
 
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
-array_push($names,"斎藤");
+array_push($names, "斎藤");
 print_r($names);
 echo PHP_EOL;
 
@@ -22,14 +22,14 @@ print("#####q2#####".PHP_EOL);
 $array1 = ["dog", "cat", "fish"];
 $array2 = ["bird", "bat", "tiger"];
 
-  # 以下に回答を記載
+# 以下に回答を記載
 
 <?php
 
 $array1 = ["dog", "cat", "fish"];
 $array2 = ["bird", "bat", "tiger"];
 
-$array = array_merge($array1,$array2);
+$array = array_merge($array1, $array2);
 print_r($array);
 echo PHP_EOL;
 
@@ -41,18 +41,18 @@ echo PHP_EOL;
 print("#####q3#####".PHP_EOL);
 $numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
 
-  # 以下に回答を記載
+# 以下に回答を記載
 <?php
-  $numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
+$numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
 
-  $count = 0;
-  foreach($numbers as $number){
-    if($number === 3){
-      $count++;
-    }
+$count = 0;
+foreach ($numbers as $number) {
+  if ($number === 3) {
+    $count++;
   }
+}
 
-print_r($count . "回".PHP_EOL);
+print_r($count . "回" . PHP_EOL);
 
 echo PHP_EOL;
 ?>
@@ -60,12 +60,12 @@ echo PHP_EOL;
 print("#####q4#####".PHP_EOL);
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
 
-  # 以下に回答を記載
+# 以下に回答を記載
 <?php
 
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
 
-$sports = array_diff($sports,[null]);
+$sports = array_diff($sports, [null]);
 
 print_r($sports);
 
@@ -77,24 +77,24 @@ print("#####q5#####".PHP_EOL);
 $array1 = [];
 $array2 = [1, 5, 8, 10];
 
-  # 以下に回答を記載
-  <?php
-  $array1 = [];
-  if (empty($array1)) {
-      echo "true";
-  }else {
-      echo "false";
-  }
+# 以下に回答を記載
+<?php
+$array1 = [];
+if (empty($array1)) {
+  echo "true";
+} else {
+  echo "false";
+}
 
-  echo PHP_EOL;
+echo PHP_EOL;
 
-  $array2 = [1, 5, 8, 10];
-  if (empty($array2)) {
-      echo "true";
-  } else {
-      echo "false";
-  }
-  
+$array2 = [1, 5, 8, 10];
+if (empty($array2)) {
+  echo "true";
+} else {
+  echo "false";
+}
+
 ?>
 
 echo PHP_EOL;
@@ -102,18 +102,18 @@ echo PHP_EOL;
 print("#####q6#####".PHP_EOL);
 $numbers1 = [1, 2, 3, 4, 5];
 
-  # 以下に回答を記載
+# 以下に回答を記載
 
 <?php
 
-$numbers1 = [1,2,3,4,5];
+$numbers1 = [1, 2, 3, 4, 5];
 
 $numbers2 = [];
 foreach ($numbers1 as $number) {
-        $number= $number * 10;
-        array_push($numbers2,$number);
-        }    
-    print_r($numbers2);
+  $number = $number * 10;
+  array_push($numbers2, $number);
+}
+print_r($numbers2);
 
 echo PHP_EOL;
 ?>
@@ -121,14 +121,14 @@ echo PHP_EOL;
 print("#####q7#####".PHP_EOL);
 $array = ["1", "2", "3", "4", "5"];
 
-  # 以下に回答を記載
-  <?php
+# 以下に回答を記載
+<?php
 
-$array = ["1" ,"2", "3", "4", "5"];
+$array = ["1", "2", "3", "4", "5"];
 
-$array = array_map('intval',$array);
+$array = array_map('intval', $array);
 
-  # 以下は変更しないで下さい
+# 以下は変更しないで下さい
 var_dump($array);
 
 echo PHP_EOL;
@@ -137,7 +137,7 @@ echo PHP_EOL;
 print("#####q8#####".PHP_EOL);
 $programming_languages = ["php","ruby","python","javascript"];
 
-  # 以下に回答を記載
+# 以下に回答を記載
 
 <?php
 
@@ -146,9 +146,9 @@ $upper_case_programming_languages = ["php", "ruby", "python", "javascript"];
 
 # コードを追加
 $programming_languages = array_map('ucfirst', $programming_languages);
-$upper_case_programming_languages = array_map('strtoupper',$upper_case_programming_languages);
+$upper_case_programming_languages = array_map('strtoupper', $upper_case_programming_languages);
 
-  # 以下は変更しないで下さい
+# 以下は変更しないで下さい
 print_r($programming_languages);
 echo PHP_EOL;
 print_r($upper_case_programming_languages);
@@ -159,14 +159,14 @@ echo PHP_EOL;
 print("#####q9#####".PHP_EOL);
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
-  # 以下に回答を記載
+# 以下に回答を記載
 <?php
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 $member = [];
 foreach ($names as $key => $name) {
   $number = $key + 1;
-  $names2 = "会員No.".$number."".$name;
-  array_push($member,$names2);
+  $names2 = "会員No." . $number . "" . $name;
+  array_push($member, $names2);
 }
 print_r($member);
 echo PHP_EOL;
@@ -174,66 +174,122 @@ echo PHP_EOL;
 ?>
 
 print("#####q10#####".PHP_EOL);
-$foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼","高級なうに"]];
+<?php
+$foods = ["いか", "たこ", "うに", "しゃけ", "うにぎり", "うに軍艦", "うに丼", "高級なうに"];
 
-  # 以下に回答を記載
-
-echo PHP_EOL;
-
+# 以下に回答を記載
+$word = 'うに';
+foreach ($foods as $food) {
+  if (strpos($food, $word) === false) {
+    echo "まぁまぁ好きです";
+  } else {
+    echo "好物です";
+  }
+  echo PHP_EOL;
+}
+?>
 print("#####q11#####".PHP_EOL);
+<?php
 $sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]];
 
-  # 以下に回答を記載
+# 以下に回答を記載
+$sports2 = [];
+foreach ($sports as $key => $sport) {
+  if (is_array($sport)) {
+    $sports2 = array_merge($sports2, $sport);
+  } else {
+    array_push($sports2, $sport);
+  }
+}
+$sports2 = array_unique($sports2);
+$sports2 = array_values($sports2);
+$sports3 = [];
+foreach ($sports2 as $key => $sport) {
+  $number = $key + 1;
+  $sport3 = "No." . $number . " " . $sport;
+  array_push($sports3, $sport3);
+}
+print_r("ユーザーの趣味一覧" . PHP_EOL);
+foreach ($sports3 as $sports) {
+  print($sports . PHP_EOL);
+}
 
 echo PHP_EOL;
 
+?>
 print("#####q12#####".PHP_EOL);
-$data = [ "user" => [ "name" => "satou", "age" => 33 ] ];
+<?php
+$data = ["user" => ["name" => "satou", "age" => 33]];
 
-  # 以下に回答を記載
-
+# 以下に回答を記載
+print_r($data["user"]["age"]);
 echo PHP_EOL;
-
+?>
 print("#####q13#####".PHP_EOL);
-$user_data = [ "name" => "神里", "age" => 31, "address" => "埼玉"];
-$update_data = [ "age" => 32, "address" => "沖縄" ];
+<?php
+$user_data = ["name" => "神里", "age" => 31, "address" => "埼玉"];
+$update_data = ["age" => 32, "address" => "沖縄"];
 
-  # 以下に回答を記載
+# 以下に回答を記載
+$user_data = array_merge($user_data, $update_data);
+print_r($user_data);
 
 echo PHP_EOL;
-
+?>
 print("#####q14#####".PHP_EOL);
-$data = [ "name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com" ];
+<?php
+$data = ["name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com"];
 
-  # 以下に回答を記載
-
+# 以下に回答を記載
+$data2 = [];
+foreach ($data as $d) {
+  array_push($data2, $d);
+}
+print_r($data2);
 echo PHP_EOL;
 
+?>
 print("#####q15#####".PHP_EOL);
-$data1 = [ "name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin" ];
-$data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
-
-  # 以下に回答を記載
-
+<?php
+$data1 = ["name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin"];
+if (array_key_exists('age', $data1)) {
+  echo "OK";
+} else {
+  echo "NG";
+}
 echo PHP_EOL;
+
+$data2 = ["name" => "yamada", "hobby" => "baseball", "role" => "normal"];
+if (array_key_exists('age', $data2)) {
+  echo "OK";
+} else {
+  echo "NG";
+}
+echo PHP_EOL;
+?>
+# 以下に回答を記載
 
 print("#####q16#####".PHP_EOL);
+<?php
 $users = [
-  [ "name" => "satou", "age" => 22 ],
-  [ "name" => "yamada", "age" => 12 ],
-  [ "name" => "takahashi", "age" => 32 ],
-  [ "name" => "nakamura", "age" => 41 ]
+  ["name" => "satou", "age" => 22],
+  ["name" => "yamada", "age" => 12],
+  ["name" => "takahashi", "age" => 32],
+  ["name" => "nakamura", "age" => 41]
 ];
 
-  # 以下に回答を記載
+# 以下に回答を記載
 
+foreach ($users as $key => $user) {
+  echo "私の名前は" . $user["name"] . "です。" . "年齢は" . $user["age"] . "です。" . PHP_EOL;
+}
 echo PHP_EOL;
-
+?>
 print("#####q17#####".PHP_EOL);
 class User
 {
 
-  # コードを追加
+# コードを追加
 
 }
 
@@ -248,7 +304,7 @@ echo PHP_EOL;
 
 print("#####q18#####".PHP_EOL);
 
-  # コードを追加
+# コードを追加
 
 $man1 = new Man("あじー",32);
 $man2 = new Man("ゆたぼん",10);
@@ -260,15 +316,15 @@ echo PHP_EOL;
 
 print("#####q19#####".PHP_EOL);
 class Item{
-  # 以下を修正して下さい
+# 以下を修正して下さい
 
-  protected $name;
+protected $name;
 
-  function __construct($book_name){
-    $this->name = $book_name;
-  }
+function __construct($book_name){
+$this->name = $book_name;
 }
-  # 以下は変更しないで下さい
+}
+# 以下は変更しないで下さい
 
 $book = new Item("ゼロ秒思考");
 print($book->name.PHP_EOL);
@@ -279,14 +335,14 @@ print("#####q20#####".PHP_EOL);
 class Human
 {
 
-  # コードを追加
+# コードを追加
 
 }
 
 class Zoo
 {
 
-  # コードを追加
+# コードを追加
 
 }
 
@@ -300,7 +356,7 @@ $human4 = new Human("ぎん",108);
 $humans = [ $human1, $human2, $human3, $human4 ];
 
 foreach($humans as $human){
-  $zoo->info_entry_fee($human);
+$zoo->info_entry_fee($human);
 }
 
 echo PHP_EOL;
