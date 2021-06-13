@@ -380,31 +380,88 @@ echo PHP_EOL;
 
 ?>
 print("#####q20#####".PHP_EOL);
+<?php
 class Human
 {
 
-# コードを追加
+  # コードを追加
+  public $name;
+  public $age;
 
+  function __construct($user_name, $user_age)
+  {
+    $this->name = $user_name;
+    $this->age = $user_age;
+  }
 }
 
 class Zoo
 {
 
-# コードを追加
+  # コードを追加
+  protected $name;
+  private $fee;
 
+  function __construct($zoo_name, $zoo_fee)
+  {
+    $this->name = $zoo_name;
+    $this->fee = $zoo_fee;
+  }
+
+  function info_entry_fee(Human $human)
+  {
+    if ($human->age <= 5) {
+      print($human->name . "さんの入場料金は" . $this->fee["infant"] . "円です。");
+    } elseif ($human->age <= 12) {
+      print($human->name . "さんの入場料金は" . $this->fee["children"] . "円です。");
+    } elseif ($human->age <= 64) {
+      print($human->name . "さんの入場料金は" . $this->fee["adult"] . "円です。");
+    } elseif ($human->age <= 120) {
+      print($human->name . "さんの入場料金は" . $this->fee["senior"] . "円です。");
+    }
+    echo PHP_EOL;
+  }
 }
 
-$zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
 
-$human1 = new Human("たま",3);
-$human2 = new Human("ゆたぼん",10);
-$human3 = new Human("あじー",32);
-$human4 = new Human("ぎん",108);
+$zoo = new Zoo("旭山動物園", ["infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
 
-$humans = [ $human1, $human2, $human3, $human4 ];
+$human1 = new Human("たま", 3);
+$human2 = new Human("ゆたぼん", 10);
+$human3 = new Human("あじー", 32);
+$human4 = new Human("ぎん", 108);
 
-foreach($humans as $human){
-$zoo->info_entry_fee($human);
+$humans = [$human1, $human2, $human3, $human4];
+
+foreach ($humans as $human) {
+  $zoo->info_entry_fee($human);
 }
 
 echo PHP_EOL;
+
+?>
+
+print("#####q21#####".PHP_EOL);
+//Q21. FizzBuzz問題の応用問題です。次の仕様、条件を満たすコードを書いて、1から30までの正の整数を期待する出力結果にして下さい。
+
+<?php
+
+for ($i = 1; $i <= 30; $i++) {
+  if ($i % 15 === 0 || $i % 30 === 0) {
+    echo "FizzBuzz";
+  } elseif ($i % 21 === 0) {
+    echo "FIzzHoge";
+  } elseif ($i % 3 == 0) {
+    echo "Fizz";
+  } elseif ($i % 5 == 0) {
+    echo "Buzz";
+  } elseif ($i % 7 == 0) {
+    echo "Hoge";
+  } else {
+    echo $i;
+  }
+  echo PHP_EOL;
+}
+
+
+?>
