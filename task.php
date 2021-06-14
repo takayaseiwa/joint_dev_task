@@ -447,10 +447,14 @@ print("#####q21#####".PHP_EOL);
 <?php
 
 for ($i = 1; $i <= 30; $i++) {
-  if ($i % 15 === 0 || $i % 30 === 0) {
-    echo "FizzBuzz";
+  if ($i % 105 === 0) {
+    echo "FizzBuzzHoge";
   } elseif ($i % 21 === 0) {
     echo "FIzzHoge";
+  } elseif ($i % 35 === 0) {
+    echo "BuzzHoge";
+  } elseif ($i % 15 === 0) {
+    echo "FizzBuzz";
   } elseif ($i % 3 == 0) {
     echo "Fizz";
   } elseif ($i % 5 == 0) {
